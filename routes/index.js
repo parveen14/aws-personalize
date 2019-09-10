@@ -97,7 +97,7 @@ let populateMetaData = (items) => {
   items.forEach(item => {
     let itemIndex = getIndexIfObjWithOwnAttr(shopifyProducts, 'handle', item.itemId);
     let itemData = {
-        name: shopifyProducts[itemIndex].title,
+        title: shopifyProducts[itemIndex].title,
         price: shopifyProducts[itemIndex].variants[0].price,
         image: shopifyProducts[itemIndex].image.src,
         url: `https://atticandbutton.com/products/${item.itemId}`
